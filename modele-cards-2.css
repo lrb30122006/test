@@ -1,0 +1,92 @@
+/* Couleurs Altéora Prestige */
+:root {
+    --primary-color: #00E5FF; /* Bleu clair, couleur moderne et élégante */
+    --secondary-color: #2b2b2b; /* Gris très foncé pour un contraste élégant */
+    --accent-color: #FFD700; /* Or pour une touche de luxe */
+    --bg-color: #f9f9f9; /* Arrière-plan léger et neutre */
+    --hover-bg: #00b8cc; /* Couleur au survol */
+  }
+  
+  .destination {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: white; /* Fond blanc pour un aspect soigné */
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  .destination-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover .destination-image {
+    transform: scale(1.1);
+  }
+  
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .destination-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--secondary-color); /* Gris foncé pour une lecture facile */
+  }
+  
+  .destination-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--bg-color);
+    border-top: 1px solid #ddd;
+    border-radius: 0 0 20px 20px;
+  }
+  
+  .destination-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color); /* Bleu clair pour une touche fraîche */
+  }
+  
+  .explore-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .explore-btn:hover {
+    background-color: var(--hover-bg); /* Changement de couleur lors du survol */
+  }
+  
