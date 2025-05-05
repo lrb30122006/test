@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playfair+Display&display=swap');
+
+.guestbook-section {
+  padding: 60px 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.guestbook-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 40px;
+  color: #1e1e1e;
+}
+
+.guestbook-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 0 10px;
+}
+
+.quote-card {
+  padding: 20px 25px;
+  border-radius: 15px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeInZoom 0.8s ease-out forwards;
+}
+
+.quote-card.light {
+  background: #ffffff;
+  color: #333;
+}
+
+.quote-card.dark {
+  background: #2b2b2b;
+  color: #eee;
+}
+
+.author {
+  margin-top: 15px;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+}
+
+/* Animation */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.quote-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .quote-card:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .quote-card:nth-child(3) {
+    animation-delay: 0.5s;
+  }
+  .quote-card:nth-child(4) {
+    animation-delay: 0.7s;
+  }
+  
