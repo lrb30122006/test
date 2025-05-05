@@ -1,0 +1,17 @@
+#map {
+    height: 500px;
+    width: 90%;
+    margin: 40px auto;
+    border: 3px solid var(--primary-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .avis-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-top: 60px;
+    font-family: 'Georgia', serif;
+  }
+  

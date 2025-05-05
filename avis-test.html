@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="avis-test.css">
+    <title>avis test</title>
+</head>
+<body>
+    <h2 class="avis-title">Avis de nos voyageurs</h2>
+<div id="map"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Initialisation de la carte
+  const map = L.map('map').setView([20, 0], 2); // Vue monde
+
+  // Fond de carte
+  L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap',
+    minZoom: 2,
+  }).addTo(map);
+
+  // Exemple de marqueurs
+  const avisData = [
+    {
+      coords: [49.6117, 6.1319], // Luxembourg
+      destination: "Luxembourg",
+      user: "Élise D.",
+      avatar: "https://i.pravatar.cc/40?img=3",
+      message: "Séjour magique, organisation parfaite avec Altéora !"
+    },
+    {
+      coords: [25.7617, -80.1918], // Miami
+      destination: "Floride",
+      user: "Léo R.",
+      avatar: "https://i.pravatar.cc/40?img=7",
+      message: "J'ai adoré les plages et le service 5 étoiles."
+    },
+    {
+      coords: [50.0, 10.0], // Listembourg (emplacement fictif)
+      destination: "Listembourg",
+      user: "Anya K.",
+      avatar: "https://i.pravatar.cc/40?img=9",
+      message: "Wifi dans les forêts ? Une expérience féerique !"
+    }
+  ];
+
+  // Ajouter les marqueurs
+  avisData.forEach(avis => {
+    L.marker(avis.coords, {
+      icon: L.icon({
+        iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
+        iconSize: [30, 30],
+      })
+    }).addTo(map).bindPopup(`
+      <strong>${avis.destination}</strong><br>
+      <img src="${avis.avatar}" style="border-radius:50%;width:40px;height:40px;margin-right:10px;float:left;">
+      <p style="margin:0;"><strong>${avis.user}</strong><br>${avis.message}</p>
+    `);
+  });
+</script>
+</body>
+</html>
